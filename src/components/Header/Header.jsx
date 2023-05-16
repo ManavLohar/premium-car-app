@@ -28,12 +28,14 @@ function Header() {
   };
 
   // hide menu for mobile
-  function linkAction() {
-    navMenu.classList.remove("show-menu");
-  }
-  navLink.forEach((e) => {
-    e.addEventListener("click", linkAction);
-  });
+  // function linkAction() {
+  // }
+  // navLink.forEach((e) => {
+  //   e.addEventListener("click", () => {
+  //     const navMenu = document.getElementById("nav-menu");
+  //     navMenu.classList.remove("show-menu");
+  //   });
+  // });
 
   // change background header on scroll
   function scrollHeader() {
@@ -50,29 +52,29 @@ function Header() {
     <header className='header' id='header'>
       <nav className='nav container'>
         <a href='#' className='nav__logo'>
-          <i class='ri-steering-line'></i>
+          <i className='ri-steering-line'></i>
           Elecar
         </a>
 
         <div className='nav__menu' id='nav-menu'>
           <ul className='nav__list'>
             <li className='nav__item'>
-              <a href='#home' className='nav__link'>
+              <a href='#home' className='nav__link' onClick={closeMenu}>
                 Home
               </a>
             </li>
             <li className='nav__item'>
-              <a href='#about' className='nav__link'>
+              <a href='#about' className='nav__link' onClick={closeMenu}>
                 About
               </a>
             </li>
             <li className='nav__item'>
-              <a href='#popular' className='nav__link'>
+              <a href='#popular' className='nav__link' onClick={closeMenu}>
                 Popular
               </a>
             </li>
             <li className='nav__item'>
-              <a href='#featured' className='nav__link'>
+              <a href='#featured' className='nav__link' onClick={closeMenu}>
                 Featured
               </a>
             </li>

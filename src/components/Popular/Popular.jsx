@@ -21,26 +21,25 @@ function Popular() {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={24}
-          slidesPerView={1.8}
+          slidesPerView={1.3}
           loop={true}
           grabCursor={true}
           // navigation
           pagination={{ el: ".swiper-pagination", dynamicBullets: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
           breakpoints={{
-            768:{
+            768: {
               slidesPerView: 3,
             },
-            1024:{
-              spaceBetween: 48
-            }
-          }}
-          >
+            1024: {
+              spaceBetween: 48,
+            },
+          }}>
           <div>
-            {popularData.map((data) => {
+            {popularData.map((data, index) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                   <article className='popular__card'>
                     <div className='shape shape__smaller'></div>
 
@@ -51,27 +50,27 @@ function Popular() {
 
                     <div className='popular__data'>
                       <div className='popular__data-group'>
-                        <i class='ri-battery-charge-line'></i> 3.7 Sec
+                        <i className='ri-battery-charge-line'></i> 3.7 Sec
                       </div>
                       <div className='popular__data-group'>
-                        <i class='ri-funds-box-line'></i> 356 Km/h
+                        <i className='ri-funds-box-line'></i> 356 Km/h
                       </div>
                       <div className='popular__data-group'>
-                        <i class='ri-charging-pile-2-line'></i> Electric
+                        <i className='ri-charging-pile-2-line'></i> Electric
                       </div>
                     </div>
 
                     <h3 className='popular__price'>{data.price}</h3>
 
                     <button className='button popular__button'>
-                      <i class='ri-shopping-bag-2-line'></i>
+                      <i className='ri-shopping-bag-2-line'></i>
                     </button>
                   </article>
                 </SwiperSlide>
               );
             })}
           </div>
-          <div className="swiper-pagination"></div>
+          <div className='swiper-pagination'></div>
         </Swiper>
       </div>
     </section>
