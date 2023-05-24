@@ -2,8 +2,6 @@ import React from "react";
 import "./Header.css";
 
 function Header() {
-  const navMenu = document.getElementById("nav-menu"),
-    navLink = document.querySelectorAll(".nav__link");
 
   // show menu
   // if (navToggle) {
@@ -47,6 +45,8 @@ function Header() {
     }
   }
   window.addEventListener("scroll", scrollHeader);
+
+
 
   return (
     <header className='header' id='header'>

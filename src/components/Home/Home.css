@@ -105,17 +105,17 @@
 
 .home .shape__big,
 .home .shape__small {
-    position: absolute;
+  position: absolute;
 }
 
-.home .shape__big{
-    left: -9rem;
-    top: -4rem;
+.home .shape__big {
+  left: -9rem;
+  top: -4rem;
 }
 
-.home .shape__small{
-    right: -10rem;
-    bottom: 3rem;
+.home .shape__small {
+  right: -10rem;
+  bottom: 3rem;
 }
 
 @keyframes button {
@@ -124,5 +124,30 @@
   }
   50% {
     box-shadow: 0 0 24px hsl(158, 98%, 43%);
+  }
+}
+
+/* for small devices  */
+
+@media screen and (max-width: 320px) {
+  .home__car {
+    column-gap: 2rem;
+  }
+}
+
+/* for large devices  */
+@media screen and (min-width: 1040px) {
+  .home__container {
+    padding-top: 2rem;
+  }
+  .home__img{
+    width: 380px;
+  }
+  .home__car{
+    column-gap: 7rem;
+  }
+  .home__car-icon{
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
 }

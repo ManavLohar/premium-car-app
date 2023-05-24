@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "../components/Header/Header";
 import Home from "../components/Home/Home";
 import About from "../components/About/About";
@@ -19,6 +19,7 @@ function App() {
     }
   }
   window.addEventListener("scroll", scrollUp);
+
   return (
     <div>
       <Header />

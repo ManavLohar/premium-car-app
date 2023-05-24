@@ -65,3 +65,39 @@
     margin: auto;
     transform: rotate(-22deg);
 }
+
+/* for midium devices  */
+@media screen and (min-width: 576px){
+ .features__map{
+    left: 0;
+    right: 0;
+ }   
+}
+
+/* for large devices */
+@media screen and (min-width: 1040px){
+ .features__container{
+    padding: 2rem 0 3rem;
+ } 
+ .features__img{
+    width: 200px;
+ }
+ .features__card{
+    width: 127px;
+    padding: .75rem 2.5rem;
+ }
+ .features__card-1{
+    left: -1rem;
+ }
+ .features__card-2{
+    right: -2.5rem;
+ }
+ .features__card-3{
+    bottom: 7rem;
+    left: -1rem;
+ }
+ .features__map{
+    width: 650px;
+    top: 11rem;
+ }
+}

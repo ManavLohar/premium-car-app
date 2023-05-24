@@ -29,10 +29,14 @@ function Popular() {
           // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log("slide change")}
           breakpoints={{
+            540: {
+              slidesPerView: 2.5
+            },
             768: {
-              slidesPerView: 3,
+              slidesPerView: 2.5,
             },
             1024: {
+              slidesPerView: 3,
               spaceBetween: 48,
             },
           }}>

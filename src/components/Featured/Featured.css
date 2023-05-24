@@ -117,3 +117,32 @@
 .active-featured img{
     opacity: 1;
 }
+
+/* for midium devices  */
+@media screen and (min-width: 576px){
+    .featured__content{
+        grid-template-columns: repeat(2, 228px);
+    }
+}
+
+/* for large devices */
+@media screen and (min-width: 1040px){
+ .featured__container{
+    padding-bottom: 2.5rem;
+ } 
+ .featured__filters{
+    column-gap: 2rem;
+    margin-bottom: 4.5rem;
+ }
+ .featured__item{
+    width: 52px;
+    height: 52px;
+ }
+ .featured__item img {
+    width: 2rem;
+ }
+ .featured__content{
+    grid-template-columns: repeat(3, 248px);
+    gap: 4rem;
+ }
+}
